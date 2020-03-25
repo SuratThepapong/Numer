@@ -1,0 +1,14 @@
+version: "3.5"
+services:
+  sample-app:
+    container_name: react-docker
+    build:
+      context: C:\Users\Ton\Desktop\ReactProject\my-app
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/app"
+
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=${NODE_ENV}
